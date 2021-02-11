@@ -13,7 +13,9 @@ public class User {
 
     private String firstName;
     private String lastName;
+    private String division;
     private LocalDate birthDay;
+
 
     @ManyToMany(mappedBy = "usersInThisRole")
     private List<AccessRole> userRoles;
@@ -35,5 +37,45 @@ public class User {
 
     public Integer getId() {
         return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getDivision() {
+        return division;
+    }
+
+    public void setDivision(String division) {
+        this.division = division;
+    }
+
+    public LocalDate getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(LocalDate birthDay) {
+        this.birthDay = birthDay;
+    }
+
+    public List<AccessRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(List<AccessRole> userRoles) {
+        this.userRoles = userRoles;
     }
 }
